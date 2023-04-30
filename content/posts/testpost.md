@@ -9,7 +9,6 @@ draft: true
 This is **bold** text. This is *emphasized* text.
 
 Publish me???
-fuck it
 
 ```html
   // your code here
