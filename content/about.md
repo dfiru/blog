@@ -2,7 +2,7 @@
 title = "About"
 date = "2023-04-30"
 author = "Daniel Firu"
-draft =  true
+draft =  false
 +++
 
 # About
