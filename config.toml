@@ -80,7 +80,7 @@ theme = 'terminal'
 
     [languages.en.params.logo]
       logoText = "danfiru"
-      logoHomeLink = "/"
+      logoHomeLink = "/blog/"
 
     [languages.en.menu]
       [[languages.en.menu.main]]
@@ -92,4 +92,4 @@ theme = 'terminal'
   # In case you would like to make changes to the theme and keep it locally in you repository,
   # uncomment the line below (and correct the local path if necessary).
   # --
-  # replacements = "github.com/panr/hugo-theme-terminal -> themes/terminal"
+  replacements = "github.com/panr/hugo-theme-terminal -> themes/terminal"
