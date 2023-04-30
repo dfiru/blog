@@ -1,4 +1,4 @@
-baseURL = 'http://example.org/'
+baseURL = 'https://dfiru.github.io/blog/'
 languageCode = 'en-us'
 title = 'My New Hugo Site'
 theme = 'terminal'
@@ -87,10 +87,6 @@ theme = 'terminal'
         identifier = "about"
         name = "About"
         url = "/about"
-      [[languages.en.menu.main]]
-        identifier = "showcase"
-        name = "Showcase"
-        url = "/showcase"
 
 [module]
   # In case you would like to make changes to the theme and keep it locally in you repository,
