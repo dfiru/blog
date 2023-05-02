@@ -21,7 +21,7 @@ theme = 'terminal'
   fullWidthTheme = false
 
   # center theme with default width
-  centerTheme = false
+  centerTheme = true
 
   # if your resource directory contains an image called `cover.(jpg|png|webp)`,
   # then the file will be used as a cover automatically.
@@ -88,8 +88,3 @@ theme = 'terminal'
         name = "About"
         url = "/about"
 
-[module]
-  # In case you would like to make changes to the theme and keep it locally in you repository,
-  # uncomment the line below (and correct the local path if necessary).
-  # --
-  replacements = "github.com/panr/hugo-theme-terminal -> themes/terminal"
