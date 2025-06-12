@@ -87,4 +87,8 @@ theme = 'terminal'
         identifier = "about"
         name = "About"
         url = "/about"
+      [[languages.en.menu.main]]
+        identifier = "patents"
+        name = "Patents"
+        url = "/patents"
 
