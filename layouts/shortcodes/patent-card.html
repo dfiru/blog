@@ -1,0 +1,17 @@
+{{/* 
+Patent Card Shortcode
+Usage: {{< patent-card title="Patent Title" number="US12345678" filed="2020-01-01" granted="2021-01-01" inventors="John Doe, Jane Smith" assignee="Company Name" url="https://patents.google.com/patent/US12345678" >}}
+*/}}
+
+<div class="patent-card">
+  <h3>{{ .Get "title" }}</h3>
+  <div class="patent-details">
+    {{ if .Get "number" }}<strong>Patent Number</strong>: <a href="{{ .Get "url" }}">{{ .Get "number" }}</a><br>{{ end }}
+    {{ if .Get "application" }}<strong>Application Number</strong>: <a href="{{ .Get "url" }}">{{ .Get "application" }}</a><br>{{ end }}
+    {{ if .Get "filed" }}<strong>Filed</strong>: {{ .Get "filed" }}<br>{{ end }}
+    {{ if .Get "published" }}<strong>Published</strong>: {{ .Get "published" }}<br>{{ end }}
+    {{ if .Get "granted" }}<strong>Granted</strong>: {{ .Get "granted" }}<br>{{ end }}
+    {{ if .Get "inventors" }}<strong>Co-inventors</strong>: {{ .Get "inventors" }}<br>{{ end }}
+    {{ if .Get "assignee" }}<strong>Current Assignee</strong>: {{ .Get "assignee" }}<br>{{ end }}
+  </div>
+</div>

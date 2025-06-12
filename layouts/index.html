@@ -1,0 +1,103 @@
+{{ define "main" }}
+<div class="posts">
+  <!-- Currently Section -->
+  <article class="post on-list" itemscope itemtype="http://schema.org/BlogPosting">
+    <div class="post-content">
+      <h2 class="post-title">Currently</h2>
+      <div class="currently-grid">
+        <div class="currently-item">
+          <strong>📚 Reading:</strong> <a href="https://www.goodreads.com/book/show/25877663-babylon-s-ashes" target="_blank">Babylon's Ashes by James S.A. Corey</a>
+        </div>
+        <div class="currently-item">
+          <strong>🎮 Playing:</strong> <a href="https://www.factorio.com/" target="_blank">Factorio</a>
+        </div>
+        <div class="currently-item">
+          <strong>🎲 Board Game:</strong> <a href="https://boardgamegeek.com/boardgame/285774/marvel-champions-card-game" target="_blank">Marvel Champions</a>
+        </div>
+        <div class="currently-item">
+          <strong>🏄 Surf Spot:</strong> <span>Rockaway Beach, Pacifica, CA</span>
+        </div>
+        <div class="currently-item">
+          <strong>⛷️ Ski Run:</strong> <span>Dead Tree, Palisades Tahoe</span>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- Recent Posts Section -->
+  <h2>Recent Posts</h2>
+  {{ $paginator := .Paginate (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
+  {{ range $paginator.Pages }}
+    <article class="post on-list" itemscope itemtype="http://schema.org/BlogPosting">
+      {{ partial "cover.html" . }}
+
+      <div class="post-content">
+        <h1 class="post-title">
+          <a href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
+        </h1>
+
+        {{ if .Params.Subtitle }}
+          <h2 class="post-subtitle">{{ .Params.Subtitle }}</h2>
+        {{ else }}
+          {{ if .Description }}
+            <h2 class="post-subtitle">{{ .Description }}</h2>
+          {{ end }}
+        {{ end }}
+
+        <div class="post-meta">
+          <time datetime="{{ .Date.Format "2006-01-02 15:04:05 MST" }}">
+            {{ .Date.Format "2006-01-02" }}
+          </time>
+          {{ if .Params.Author }}
+            <span class="post-author">:: {{ .Params.Author }}</span>
+          {{ end }}
+          {{ with .Params.Tags }}
+            <span class="post-tags">:: {{ range . }}<a href="{{ (urlize (printf "tags/%s" .)) | absURL }}">#{{ . }}</a>&nbsp;</span>{{ end }}
+          {{ end }}
+        </div>
+
+        {{ if .Params.ShowReadingTime | default (.Site.Params.showReadingTime | default false) }}
+          <div class="reading-time">
+            {{ i18n "reading_time" .ReadingTime }}
+          </div>
+        {{ end }}
+
+        <div>
+          {{ if .Description }}
+            {{ .Description | markdownify }}
+          {{ else }}
+            {{ if .Truncated }}
+              {{ .Summary | markdownify }}
+            {{ end }}
+          {{ end }}
+        </div>
+      </div>
+    </article>
+  {{ end }}
+
+  {{ partial "pagination.html" . }}
+</div>
+
+<style>
+.currently-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.5rem;
+  margin: 1rem 0;
+  padding: 1rem;
+  background: var(--accent-alpha-20);
+  border-radius: 4px;
+}
+
+.currently-item {
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.currently-item strong {
+  color: var(--accent);
+  margin-right: 0.5rem;
+}
+
+</style>
+{{ end }}
