@@ -1,6 +1,6 @@
 ---
 title: "The Next Application Processor Will Be Mostly NPU"
-date: 2026-04-07T17:00:00-07:00
+date: 2026-04-07T00:00:00-07:00
 tags: ["edge-ai", "semiconductors", "npus"]
 draft: false
 author: "Daniel Firu"
