@@ -12,7 +12,7 @@ theme = 'terminal'
   themeColor = "blue"
 
   # if you set this to 0, only submenu trigger will be visible
-  showMenuItems = 2
+  showMenuItems = 3
 
   # show selector to switch language
   showLanguageSelector = false
@@ -83,6 +83,10 @@ theme = 'terminal'
       logoHomeLink = "/blog/"
 
     [languages.en.menu]
+      [[languages.en.menu.main]]
+        identifier = "blog"
+        name = "Blog"
+        url = "/"
       [[languages.en.menu.main]]
         identifier = "about"
         name = "About"
