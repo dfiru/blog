@@ -1,0 +1,427 @@
+/* ============================================
+   CYBERPUNK / NETRUNNER / STEAMPUNK OVERRIDE
+   danfiru.github.io/blog
+   ============================================ */
+
+/* --- Import display font --- */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap');
+
+/* --- Root variables --- */
+:root {
+  --cyber-bg: #141420;
+  --cyber-bg-light: #1a1a2e;
+  --cyber-cyan: #00ffd5;
+  --cyber-magenta: #ff2d6f;
+  --cyber-amber: #b490ff;
+  --cyber-brass: #7c4dff;
+  --cyber-rust: #5e35b1;
+  --cyber-dim: rgba(0, 255, 213, 0.15);
+  --violet-glow: 0 0 10px rgba(157, 107, 255, 0.3), 0 0 40px rgba(157, 107, 255, 0.1);
+  --cyber-glow: 0 0 10px rgba(0, 255, 213, 0.3), 0 0 40px rgba(0, 255, 213, 0.1);
+  --brass-glow: 0 0 10px rgba(157, 107, 255, 0.3), 0 0 40px rgba(157, 107, 255, 0.1);
+  --scanline: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 255, 213, 0.015) 2px,
+    rgba(0, 255, 213, 0.015) 4px
+  );
+}
+
+/* --- Base overrides --- */
+body {
+  background-color: var(--cyber-bg) !important;
+  background-image: var(--scanline);
+  color: #c0c0c8 !important;
+}
+
+/* --- Logo: Orbitron display font with neon glow --- */
+.logo {
+  font-family: 'Orbitron', monospace !important;
+  font-weight: 900;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  background: var(--cyber-cyan) !important;
+  color: var(--cyber-bg) !important;
+  box-shadow: var(--cyber-glow);
+  border: 1px solid var(--cyber-cyan);
+  position: relative;
+}
+
+.logo:hover {
+  background: var(--cyber-magenta) !important;
+  box-shadow: 0 0 10px rgba(255, 45, 111, 0.4), 0 0 40px rgba(255, 45, 111, 0.15);
+  border-color: var(--cyber-magenta);
+}
+
+/* --- Header bar: brass accent line --- */
+.header__logo:after {
+  background: repeating-linear-gradient(
+    90deg,
+    var(--cyber-amber),
+    var(--cyber-amber) 2px,
+    transparent 0,
+    transparent 10px
+  ) !important;
+  opacity: 0.6;
+}
+
+/* --- Menu links --- */
+.menu a {
+  color: var(--cyber-amber) !important;
+  text-decoration: none;
+  position: relative;
+}
+
+.menu a:hover {
+  color: var(--cyber-cyan) !important;
+  text-shadow: var(--cyber-glow);
+}
+
+.menu__inner li:not(:last-of-type)::after {
+  color: var(--cyber-amber) !important;
+  opacity: 0.4;
+}
+
+/* --- Headings: Orbitron + neon --- */
+h1, h2, h3 {
+  font-family: 'Orbitron', 'Fira Code', monospace !important;
+  color: var(--cyber-cyan) !important;
+  letter-spacing: 0.05em;
+}
+
+h4, h5, h6 {
+  color: var(--cyber-amber) !important;
+}
+
+/* --- Post titles --- */
+.post-title a {
+  color: var(--cyber-cyan) !important;
+  text-decoration: none;
+}
+
+.post-title a:hover {
+  text-shadow: var(--cyber-glow);
+}
+
+.post-title {
+  font-family: 'Orbitron', 'Fira Code', monospace !important;
+}
+
+/* --- Post metadata: brass/amber tone --- */
+.post-meta {
+  color: var(--cyber-amber) !important;
+  opacity: 0.7;
+}
+
+.post-tags a {
+  color: var(--cyber-magenta) !important;
+}
+
+.post-tags a:hover {
+  text-shadow: 0 0 8px rgba(255, 45, 111, 0.5);
+}
+
+/* --- Links: cyan with glow on hover --- */
+.post-content a,
+.content a {
+  color: var(--cyber-cyan) !important;
+  text-decoration-color: rgba(0, 255, 213, 0.3) !important;
+}
+
+.post-content a:hover,
+.content a:hover {
+  text-shadow: var(--cyber-glow);
+  text-decoration-color: var(--cyber-cyan) !important;
+}
+
+/* --- Code: darker with cyan highlight --- */
+code, kbd {
+  background: rgba(0, 255, 213, 0.08) !important;
+  color: var(--cyber-cyan) !important;
+  border: 1px solid rgba(0, 255, 213, 0.1);
+}
+
+pre {
+  border-top: 1px solid rgba(157, 107, 255, 0.3) !important;
+  border-bottom: 1px solid rgba(157, 107, 255, 0.3) !important;
+  background: var(--cyber-bg-light) !important;
+  position: relative;
+}
+
+/* Brass corner accents on code blocks (steampunk) */
+pre::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 20px;
+  height: 1px;
+  background: var(--cyber-amber);
+  box-shadow: var(--brass-glow);
+}
+
+pre::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  right: 0;
+  width: 20px;
+  height: 1px;
+  background: var(--cyber-amber);
+  box-shadow: var(--brass-glow);
+}
+
+pre code {
+  background: none !important;
+  border: none !important;
+}
+
+/* --- Blockquotes: magenta accent --- */
+blockquote {
+  border-top: 1px solid var(--cyber-magenta) !important;
+  border-bottom: 1px solid var(--cyber-magenta) !important;
+  background-color: rgba(255, 45, 111, 0.05) !important;
+}
+
+blockquote p:first-of-type:before {
+  color: var(--cyber-magenta) !important;
+}
+
+/* --- Tables: brass borders --- */
+table, th, td {
+  border: 1px dashed var(--cyber-amber) !important;
+}
+
+th {
+  color: var(--cyber-amber) !important;
+  font-family: 'Orbitron', monospace !important;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+}
+
+/* --- Ordered lists: cyan counters --- */
+ol li:before {
+  color: var(--cyber-cyan) !important;
+}
+
+/* --- Container: brass border with glow --- */
+.container {
+  border-right: 1px solid rgba(157, 107, 255, 0.15) !important;
+}
+
+/* --- Footer: minimal, on-brand --- */
+.footer {
+  opacity: 0.3 !important;
+  font-size: 0.7rem !important;
+  letter-spacing: 0.1em;
+  color: var(--cyber-amber) !important;
+  border-top: 1px solid rgba(157, 107, 255, 0.1);
+  padding-top: 15px !important;
+  padding-bottom: 15px !important;
+}
+
+.footer a {
+  color: var(--cyber-cyan) !important;
+}
+
+.footer .copyright {
+  font-family: 'Fira Code', monospace;
+  font-size: 0.65rem !important;
+}
+
+/* --- Pagination --- */
+.pagination a {
+  color: var(--cyber-cyan) !important;
+  border: 1px solid rgba(0, 255, 213, 0.2);
+  padding: 4px 12px;
+}
+
+.pagination a:hover {
+  background: rgba(0, 255, 213, 0.1);
+  box-shadow: var(--cyber-glow);
+}
+
+/* --- Currently section: steampunk card --- */
+.currently-grid {
+  background: var(--cyber-bg-light) !important;
+  border: 1px solid rgba(157, 107, 255, 0.2);
+  border-radius: 0 !important;
+  position: relative;
+}
+
+.currently-grid::before {
+  content: '// CURRENT_STATE';
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  background: var(--cyber-bg);
+  color: var(--cyber-amber);
+  font-family: 'Orbitron', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  padding: 0 8px;
+  opacity: 0.6;
+}
+
+.currently-item strong {
+  color: var(--cyber-amber) !important;
+}
+
+.currently-item a {
+  color: var(--cyber-cyan) !important;
+}
+
+/* --- Mark/highlight --- */
+mark {
+  background: var(--cyber-magenta) !important;
+  color: white !important;
+}
+
+/* --- HR: brass with glow --- */
+hr {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--cyber-amber) 20%,
+    var(--cyber-amber) 80%,
+    transparent
+  ) !important;
+  height: 1px !important;
+  opacity: 0.3;
+}
+
+/* --- Selection highlight --- */
+::selection {
+  background: var(--cyber-magenta);
+  color: white;
+}
+
+::-moz-selection {
+  background: var(--cyber-magenta);
+  color: white;
+}
+
+/* --- Scrollbar: dark with cyan thumb --- */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--cyber-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 255, 213, 0.3);
+  border-radius: 0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--cyber-cyan);
+}
+
+/* --- Figcaption: brass --- */
+figcaption {
+  background: var(--cyber-amber) !important;
+  color: var(--cyber-bg) !important;
+  font-family: 'Orbitron', monospace !important;
+  font-size: 0.75rem !important;
+  letter-spacing: 0.05em;
+}
+
+/* --- Post list separator --- */
+.post.on-list {
+  border-bottom: 1px solid rgba(157, 107, 255, 0.1);
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+}
+
+.post.on-list:last-child {
+  border-bottom: none;
+}
+
+/* --- Subtitle under header --- */
+.header::after {
+  content: 'edge ai · compilers · building things';
+  display: block;
+  font-family: 'Fira Code', monospace;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--cyber-amber);
+  opacity: 0.85;
+  letter-spacing: 0.15em;
+  margin-top: 8px;
+  padding-left: 2px;
+}
+
+/* --- Currently box: stronger steampunk frame --- */
+.currently-grid {
+  border: 1px solid rgba(157, 107, 255, 0.35) !important;
+  box-shadow:
+    inset 0 0 30px rgba(0, 0, 0, 0.5),
+    0 0 15px rgba(157, 107, 255, 0.05);
+}
+
+/* Brass corner brackets (steampunk bolts) */
+.currently-grid::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 20px;
+  height: 1px;
+  background: var(--cyber-amber);
+  box-shadow: var(--brass-glow);
+}
+
+/* --- Section headers: decorative line --- */
+.posts h2 {
+  position: relative;
+  padding-bottom: 8px;
+  margin-bottom: 20px;
+}
+
+.posts h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--cyber-cyan), transparent);
+}
+
+/* --- Glitch hover on logo (subtle) --- */
+@keyframes glitch {
+  0% { text-shadow: 2px 0 var(--cyber-magenta), -2px 0 var(--cyber-cyan); }
+  25% { text-shadow: -2px 0 var(--cyber-magenta), 2px 0 var(--cyber-cyan); }
+  50% { text-shadow: 2px 0 var(--cyber-cyan), -2px 0 var(--cyber-magenta); }
+  75% { text-shadow: -1px 0 var(--cyber-magenta), 1px 0 var(--cyber-cyan); }
+  100% { text-shadow: 2px 0 var(--cyber-magenta), -2px 0 var(--cyber-cyan); }
+}
+
+.logo:hover {
+  animation: glitch 0.3s ease-in-out;
+}
+
+/* --- Neon underline on post title hover --- */
+.post-title a {
+  position: relative;
+  display: inline;
+}
+
+.post-title a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--cyber-cyan);
+  box-shadow: var(--cyber-glow);
+  transition: width 0.3s ease;
+}
+
+.post-title a:hover::after {
+  width: 100%;
+}

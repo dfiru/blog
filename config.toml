@@ -1,6 +1,6 @@
 baseURL = 'https://dfiru.github.io/blog/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'danfiru'
 theme = 'terminal'
 
 [params]
@@ -64,7 +64,7 @@ theme = 'terminal'
   [languages.en]
     languageName = "English"
     title = "Daniel Firu"
-    subtitle = "blog here"
+    subtitle = "edge ai · compilers · building things"
     owner = ""
     keywords = "science technology ai product"
     copyright = ""
