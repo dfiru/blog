@@ -7,63 +7,7 @@ draft = false
 
 # Patents
 
-A comprehensive list of public patents where I am named as an inventor, spanning cryptocurrency mining hardware and AI/ML processing architectures.
-
----
-
-## Patents from 21, Inc. / Coinbase, Inc. (2014-2020)
-
-> **Focus Area:** Cryptocurrency mining hardware optimization and power-efficient digital circuit design
-
-{{< patent-card 
-    title="Digital currency mining circuitry"
-    number="US11270298B2"
-    filed="April 14, 2014"
-    granted="March 8, 2022"
-    inventors="Nigel Drego, Veerbhan Kheterpal, Matthew Pauker"
-    assignee="Coinbase, Inc. (originally 21E6, LLC / 21, Inc.)"
-    url="https://patents.google.com/patent/US11270298B2"
->}}
-
-{{< patent-card 
-    title="Digital currency mining circuitry having shared processing logic"
-    number="US20160125040A1"
-    filed="September 25, 2015"
-    published="May 5, 2016"
-    inventors="Nigel Drego, Veerbhan Kheterpal"
-    assignee="Coinbase, Inc. (originally 21, Inc.)"
-    url="https://patents.google.com/patent/US20160125040A1"
->}}
-
-{{< patent-card 
-    title="Digital currency mining circuitry with adaptable difficulty compare capabilities"
-    number="US20160330031A1"
-    filed="May 4, 2016"
-    published="November 10, 2016"
-    inventors="Nigel Drego, Veerbhan Kheterpal"
-    assignee="Coinbase, Inc. (originally 21, Inc.)"
-    url="https://patents.google.com/patent/US20160330031A1"
->}}
-
-{{< patent-card 
-    title="Sequential logic circuitry with reduced dynamic power consumption"
-    number="US10558188B2"
-    filed="May 21, 2019"
-    granted="February 11, 2020"
-    inventors="Veerbhan Kheterpal, Nigel Drego"
-    assignee="Coinbase, Inc. (originally 21, Inc.)"
-    url="https://patents.google.com/patent/US10558188B2"
->}}
-
-{{< patent-card 
-    title="Devices and Circuitry for Computing Hash Values"
-    number="US20200412544"
-    filed="December 31, 2020"
-    published="December 31, 2020"
-    inventors="Veerbhan Kheterpal, Nigel Drego"
-    assignee="Coinbase, Inc. (originally 21, Inc.)"
-    url="https://patents.google.com/patent/US20200412544A1"
->}}
+A comprehensive list of public patents where I am named as an inventor, spanning AI/ML processing architectures and cryptocurrency mining hardware.
 
 ---
 
@@ -71,7 +15,16 @@ A comprehensive list of public patents where I am named as an inventor, spanning
 
 > **Focus Area:** AI/ML processor architectures, reconfigurable computing, and hardware acceleration
 
-{{< patent-card 
+{{< patent-card
+    title="Systems and methods for virtually partitioning a machine perception and dense algorithm integrated circuit"
+    number="US10691464B1"
+    filed="January 24, 2018"
+    granted="June 23, 2020"
+    assignee="Quadric"
+    url="https://patents.google.com/patent/US10691464B1"
+>}}
+
+{{< patent-card
     title="Processing system for performing convolution operations"
     number="US11403530B1"
     filed="February 23, 2018"
@@ -80,7 +33,7 @@ A comprehensive list of public patents where I am named as an inventor, spanning
     url="https://patents.google.com/patent/US11403530B1"
 >}}
 
-{{< patent-card 
+{{< patent-card
     title="Joining data within a reconfigurable processor fabric"
     number="US11449459B2"
     filed="December 23, 2019"
@@ -134,7 +87,7 @@ A comprehensive list of public patents where I am named as an inventor, spanning
     url="https://patents.google.com/patent/US12067483B2"
 >}}
 
-{{< patent-card 
+{{< patent-card
     title="Processor utilizing a plurality of branch history storage structures"
     number="US12093688B2"
     filed="June 6, 2022"
@@ -143,14 +96,108 @@ A comprehensive list of public patents where I am named as an inventor, spanning
     url="https://patents.google.com/patent/US12093688B2"
 >}}
 
+{{< patent-card
+    title="Systems and methods for implementing a machine perception and dense algorithm integrated circuit"
+    number="US11803508B2"
+    filed="June 22, 2020"
+    granted="October 31, 2023"
+    assignee="Quadric"
+    url="https://patents.google.com/patent/US11803508B2"
+>}}
+
+{{< patent-card
+    title="Systems and methods for accelerating memory transfers and computation in a reconfigurable compute fabric"
+    number="US20230325087A1"
+    filed="April 7, 2023"
+    published="October 12, 2023"
+    assignee="Quadric"
+    url="https://patents.google.com/patent/US20230325087A1"
+>}}
+
+---
+
+## Patents from 21, Inc. / Coinbase, Inc. (2014-2020)
+
+> **Focus Area:** Cryptocurrency mining hardware optimization and power-efficient digital circuit design
+
+{{< patent-card
+    title="Digital currency mining circuitry"
+    number="US11270298B2"
+    filed="April 14, 2014"
+    granted="March 8, 2022"
+    inventors="Nigel Drego, Veerbhan Kheterpal, Matthew Pauker"
+    assignee="Coinbase, Inc. (originally 21E6, LLC / 21, Inc.)"
+    url="https://patents.google.com/patent/US11270298B2"
+>}}
+
+{{< patent-card
+    title="Digital currency mining circuitry having shared processing logic"
+    number="US10409827B2"
+    filed="September 25, 2015"
+    granted="September 10, 2019"
+    inventors="Nigel Drego, Veerbhan Kheterpal"
+    assignee="Coinbase, Inc. (originally 21, Inc.)"
+    url="https://patents.google.com/patent/US10409827B2"
+>}}
+
+{{< patent-card
+    title="Digital currency mining circuitry with adaptable difficulty compare capabilities"
+    number="US9942046B2"
+    filed="May 4, 2016"
+    granted="April 10, 2018"
+    inventors="Nigel Drego, Veerbhan Kheterpal"
+    assignee="Coinbase, Inc. (originally 21, Inc.)"
+    url="https://patents.google.com/patent/US9942046B2"
+>}}
+
+{{< patent-card
+    title="Sequential logic circuitry with reduced dynamic power consumption"
+    number="US10558188B2"
+    filed="May 21, 2019"
+    granted="February 11, 2020"
+    inventors="Veerbhan Kheterpal, Nigel Drego"
+    assignee="Coinbase, Inc. (originally 21, Inc.)"
+    url="https://patents.google.com/patent/US10558188B2"
+>}}
+
+{{< patent-card
+    title="Systems and methods for performing device authentication operations"
+    number="US10839378B1"
+    filed="March 30, 2018"
+    granted="November 17, 2020"
+    inventors="Veerbhan Kheterpal, Nigel Drego"
+    assignee="Coinbase, Inc. (originally 21, Inc.)"
+    url="https://patents.google.com/patent/US10839378B1"
+>}}
+
+{{< patent-card
+    title="Devices and Circuitry for Computing Hash Values"
+    number="US20200412544A1"
+    filed="December 31, 2020"
+    published="December 31, 2020"
+    inventors="Veerbhan Kheterpal, Nigel Drego"
+    assignee="Coinbase, Inc. (originally 21, Inc.)"
+    url="https://patents.google.com/patent/US20200412544A1"
+>}}
+
+{{< patent-card
+    title="Electronic devices having embedded circuitry for accessing remote digital services"
+    number="US20200410488A1"
+    filed="December 31, 2020"
+    published="December 31, 2020"
+    inventors="Veerbhan Kheterpal, Nigel Drego"
+    assignee="Coinbase, Inc. (originally 21, Inc.)"
+    url="https://patents.google.com/patent/US20200410488A1"
+>}}
+
 ---
 
 ## Summary
 
-- **Total Patents**: 13+ granted patents and applications
-- **Patent Areas**: Cryptocurrency mining, AI/ML processing, power optimization
+- **Total Patents**: 18 granted patents and applications
+- **Patent Areas**: AI/ML processing, reconfigurable computing, cryptocurrency mining, power optimization
 - **Time Span**: 2014 - 2024 (10+ years of innovation)
-- **Current Assignees**: Coinbase, Inc. and Quadric
+- **Current Assignees**: Quadric and Coinbase, Inc.
 
 ---
 
